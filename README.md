@@ -1,7 +1,15 @@
-# **Overview** 
-![image](./image/overview.png)
+# Table of Contents
+1. [Introduction](README.md#introduction)
+2. [Data Source Overview](README.md#datasource)
+3. [Requirements](README.md#requirements)
+4. [Data Pipeline](README.md#pipeline)
+5. [Docker Deployment](README.md#deploy)
 
-Preparation: Install Hadoop, Spark and Hive on Ubuntu operating system.
+
+# Introduction
+## **Build Big Data Platform for Binance Trading Data with Hadoop, Spark, Hive, Superset, Airflow, Docker** 
+![image](./image/overview.jpg)
+This is a personal project completed in 2 months of final years student at VNUHCM-University of Science. The goal of this project is to insight the road maps of **Data Engineer's role** and build the **Data Pipeline for Big Data of Binance** with **Hadoop ecosystems**.  
 
 **Step 1**: Collect data from the binance.com website using the API, then save all that data to Data Lake as raw data. This process will be performed using Python and Apache Spark (PySpark).
 
@@ -11,7 +19,7 @@ Preparation: Install Hadoop, Spark and Hive on Ubuntu operating system.
 
 **Step 4:** Use Apache Airflow to automate the entire process. Airflow will help determine the execution schedule of previous steps automatically, ensuring that data collection, ETL, and visualization are performed according to a predetermined schedule
 
-# **Data Source** 
+# Data Source View
 ## Binance API [link](https://www.binance.com/en/support/faq/how-to-create-api-keys-on-binance-360002502072)
 
 Binance test api:
@@ -19,24 +27,36 @@ Binance test api:
 `api_key = "aRkqlapnqhNXa1bYU4Q7QWkru6DHA5sdRrmKxnRTPXjbXbZhqOPCJ8p0oNCNNbhY"`
 
 `api_secret = "uK3edZV3Wy2blZHEC67UlsQVgm48JRz1WlWi5ZNrJDg4Aajt3B0QwDMQjOS6cHnH"`
-# **Data Lake** 
-## Symbol_Infor table 
+
+# Requirements 
+* MySQL for hive metastore
+* Java 8
+* Hadoop version 3.3.6
+* Hive version 3.1.2
+* Superset
+* Spark
+* Airflow
+* Docker
+
+# Data Pipeline
+## **Data Lake** 
+### Symbol_Infor table 
 ![image](./image/symbol_infor.png)
-## Ticker_24 table 
+### Ticker_24 table 
 ![image](./image/ticker_24h.png)
-## Klines table 
+### Klines table 
 ![image](./image/klines.png)
-## Trades table 
+### Trades table 
 ![image](./image/trade.png)
 
-## Hadoop hdfs
+### Hadoop hdfs
 Hadoop hdfs is the location used to store raw data for data lake with partitioned format.
 
 ![image](./image/datalake.png)
 ![image](./image/explicity_datalake.png)
 ![image](./image/explicity_datalake1.png)
 
-# **Data Warehouse** 
+## **Data Warehouse** 
 [**Data Warehouse Model**](https://dbdiagram.io/d/64b2209402bd1c4a5e1d07ad)
 
 ![image](./image/datamodel.png)
@@ -47,12 +67,18 @@ Data Warehouse in Hadoop hdfs
 ![image](./image/explicity_datawarehouse.png)
 ![image](./image/explicity_datawarehouse1.png)
 
-# **Airflow Pipeline** 
+## **Airflow Pipeline** 
 ![image](./image/airflow.png)
 ![image](./image/airflow_dags.png)
 
-# **Superset Visualization** 
+## **Superset Visualization** 
 ![image](./image/superset.jpeg)
+
+# Docker Deployment
+
+
+
+
 
 
 
