@@ -1,9 +1,9 @@
 # Table of Contents
-1. [Introduction](README.md#introduction)
-2. [Data Source Overview](README.md#datasource)
+1. [Introduction](README.md#Introduction)
+2. [Data Source Overview](README.md#data-source-overview)
 3. [Requirements](README.md#requirements)
-4. [Data Pipeline](README.md#pipeline)
-5. [Docker Deployment](README.md#deploy)
+4. [Data Pipeline](README.md#data-pipeline)
+5. [Docker Deployment](README.md#docker-deployment)
 
 
 # Introduction
@@ -19,7 +19,7 @@ This is a personal project completed in 2 months of final years student at VNUHC
 
 **Step 4:** Use Apache Airflow to automate the entire process. Airflow will help determine the execution schedule of previous steps automatically, ensuring that data collection, ETL, and visualization are performed according to a predetermined schedule
 
-# Data Source View
+# Data Source OverView
 ## Binance API [link](https://www.binance.com/en/support/faq/how-to-create-api-keys-on-binance-360002502072)
 
 Binance test api:
