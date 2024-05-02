@@ -19,6 +19,7 @@ This is a personal project completed in 2 months of final years student at VNUHC
 
 **Step 4:** Use Apache Airflow to automate the entire process. Airflow will help determine the execution schedule of previous steps automatically, ensuring that data collection, ETL, and visualization are performed according to a predetermined schedule
 
+**Step 5:** Write Dockerfile to deploy data pipeline
 # Data Source OverView
 ## Binance API [link](https://www.binance.com/en/support/faq/how-to-create-api-keys-on-binance-360002502072)
 
@@ -75,6 +76,20 @@ Data Warehouse in Hadoop hdfs
 ![image](./image/superset.jpeg)
 
 # Docker Deployment
+## Install and run data platform with docker syntax:
+`make`
+## Run cluster:
+`docker compose up`
+Turn off cluster:
+`docker compose down`
+## Web UI and URL link:
+**MySQL User**: hadoop
+**MySQL Password**: password
+**Hadoop Web UI**: <http://localhost:9870>
+**Hive URL link**: <jdbc:hive2://localhost:10000>
+**Hive Web UI**: <http://localhost:10002>
+**Ariflow Web UI**: <>
+**Superset Web UI**: <>
 
 
 

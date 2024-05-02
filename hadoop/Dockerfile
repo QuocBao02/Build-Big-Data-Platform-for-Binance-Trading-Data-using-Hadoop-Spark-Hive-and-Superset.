@@ -39,14 +39,13 @@ RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 RUN chmod 0600 ~/.ssh/authorized_keys
 
 RUN sudo mkdir $HADOOP_HOME 
-
 RUN sudo chown $USER_NAME:$GROUP_NAME -R $HADOOP_HOME
 
 # download hadoop package
 # download from website
-RUN sudo curl -fsSL $HADOOP_URL -o /tmp/hadoop.tar.gz
+# RUN sudo curl -fsSL $HADOOP_URL -o /tmp/hadoop.tar.gz
 # copy from local
-# COPY --chown=$USER_NAME:$GROUP_NAME hadoop-3.3.6.tar.gz /tmp/hadoop.tar.gz
+COPY --chown=$USER_NAME:$GROUP_NAME hadoop-3.3.6.tar.gz /tmp/hadoop.tar.gz
 
 RUN sudo tar -xvzf /tmp/hadoop.tar.gz -C $HADOOP_HOME --strip-components 1 &&\
     mkdir $HADOOP_HOME/logs &&\

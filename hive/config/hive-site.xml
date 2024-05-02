@@ -140,7 +140,7 @@
   </property>
   <property>
     <name>hive.exec.local.scratchdir</name>
-    <value>/tmp/hive/huannguyen</value>
+    <value>/tmp/hive/hadoop</value>
     <description>Local scratch space for Hive jobs</description>
   </property>
   <property>
@@ -449,7 +449,7 @@
   </property>
   <property>
     <name>hive.metastore.warehouse.dir</name>
-    <value>hdfs://172.20.1.2:9000/user/Binance_Data/warehouse</value>
+    <value>hdfs://localhost:9000/Binance_Market_Data/datawarehouse</value>
     <description>location of default database for the warehouse</description>
   </property>
   <property>
@@ -581,7 +581,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://172.20.1.4:3306/metastore_db?useUnicode=true&amp;characterEncoding=utf8</value>
+    <value>jdbc:mysql://mysql-container:3306/metastore_db?createDatabaseIfNotExist=true</value>
     <description>
       JDBC connect string for a JDBC metastore.
       To use SSL to encrypt/authenticate the connection, provide database-specific SSL flag in the connection URL.
@@ -1124,7 +1124,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
-    <value>hive</value>
+    <value>hadoop</value>
     <description>Username to use against metastore database</description>
   </property>
   <property>
@@ -1843,7 +1843,7 @@
   </property>
   <property>
     <name>hive.querylog.location</name>
-    <value>/tmp/hive/huannguyen</value>
+    <value>/tmp/hive/hadoop</value>
     <description>Location of Hive run time structured log file</description>
   </property>
   <property>
@@ -3212,7 +3212,7 @@
     <name>hive.txn.xlock.iow</name>
     <value>true</value>
     <description>
-      Ensures commands with OVERWRITE (such as INSERT OVERWRITE) acquire Exclusive locks for#8;transactional tables.  This ensures that inserts (w/o overwrite) running concurrently
+      Ensures commands with OVERWRITE (such as INSERT OVERWRITE) acquire Exclusive locks for transactional tables.  This ensures that inserts (w/o overwrite) running concurrently
       are not hidden by the INSERT OVERWRITE.
     </description>
   </property>
@@ -4401,7 +4401,7 @@
   </property>
   <property>
     <name>hive.server2.logging.operation.log.location</name>
-    <value>/tmp/hive/huannguyen/operation_logs</value>
+    <value>/tmp/hive/hadoop/operation_logs</value>
     <description>Top level directory where operation logs are stored if logging functionality is enabled</description>
   </property>
   <property>
@@ -5089,7 +5089,7 @@
   </property>
   <property>
     <name>hive.execution.engine</name>
-   <value>mr</value>
+    <value>mr</value>
     <description>
       Expects one of [mr, tez, spark].
       Chooses execution engine. Options are: mr (Map reduce, default), tez, spark. While MR
@@ -6597,7 +6597,7 @@
   </property>
   <property>
     <name>hive.spark.client.connect.timeout</name>
-    <value>10000ms</value>
+    <value>1000ms</value>
     <description>
       Expects a time value with unit (d/day, h/hour, m/min, s/sec, ms/msec, us/usec, ns/nsec), which is msec if not specified.
       Timeout for remote Spark driver in connecting back to Hive client.
@@ -6897,11 +6897,6 @@
     <description>Comma-separated list of class names extending EventConsumer,to handle the NotificationEvents retreived by the notification event poll.</description>
   </property>
   <property>
-    <name>hive.describe.partitionedtable.ignore.stats</name>
-    <value>false</value>
-    <description>Disable partitioned table stats collection for 'DESCRIBE FORMATTED' or 'DESCRIBE EXTENDED' commands.</description>
-  </property>
-  <property>
     <name>hive.blobstore.supported.schemes</name>
     <value>s3,s3a,s3n</value>
     <description>Comma-separated list of supported blobstore schemes.</description>
@@ -6925,7 +6920,7 @@
 
 <property>
   <name>hive.server2.proxy.user</name>
-  <value>huannguyen</value>
+  <value>hadoop</value>
 </property>
 
 

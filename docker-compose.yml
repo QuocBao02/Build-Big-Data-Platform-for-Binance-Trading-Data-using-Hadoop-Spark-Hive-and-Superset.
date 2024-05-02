@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  mysql:
+    image: quocbao/mysql
+    hostname: mysql-container
+    networks:
+      - my-network
+    ports:
+      - "3307:3306"
+    cpus: "0.9"
+  hive: 
+    image: quocbao/hive
+    container_name: hive-container
+    networks:
+      - my-network 
+    environment:
+      HIVE_METASTORE_JDBC_URL: jdbc:mysql://mysql-container:3306/metastore_db
+      HIVE_METASTORE_JDBC_DRIVER: com.mysql.cj.jdbc.Driver
+      HIVE_METASTORE_USER: hadoop
+      HIVE_METASTORE_PASSWORD: password
+    ports:
+      - "9870:9870"
+      - "10000:10000"
+      - "10002:10002"
+    cpus: "0.9"
+networks:
+  my-network:
+    driver: bridge

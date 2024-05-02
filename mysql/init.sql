@@ -1,0 +1,4 @@
+USE metastore_db;
+CREATE USER 'hadoop'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'hadoop'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
