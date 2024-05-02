@@ -77,11 +77,19 @@ Data Warehouse in Hadoop hdfs
 
 # Docker Deployment
 ## Install and run data platform with docker syntax:
-```make```
+```
+    make
+```
+
 ## Run cluster:
-```docker compose up```
-Turn off cluster:
-```docker compose down```
+```
+docker compose up
+```
+
+## Turn off cluster:
+```
+docker compose down
+```
 ## Web UI and URL link:
 
 **MySQL User**: hadoop
