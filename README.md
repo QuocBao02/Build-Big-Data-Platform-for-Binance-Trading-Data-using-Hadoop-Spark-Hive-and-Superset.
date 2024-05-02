@@ -77,18 +77,25 @@ Data Warehouse in Hadoop hdfs
 
 # Docker Deployment
 ## Install and run data platform with docker syntax:
-`make`
+```make```
 ## Run cluster:
-`docker compose up`
+```docker compose up```
 Turn off cluster:
-`docker compose down`
+```docker compose down```
 ## Web UI and URL link:
+
 **MySQL User**: hadoop
+
 **MySQL Password**: password
-**Hadoop Web UI**: <http://localhost:9870>
-**Hive URL link**: <jdbc:hive2://localhost:10000>
-**Hive Web UI**: <http://localhost:10002>
+
+**Hadoop Web UI**: <a href="http://localhost:9870" target="_blank">link</a>
+
+**Hive URL link**: (jdbc:hive2://localhost:10000)
+
+**Hive Web UI**: <a href="http://localhost:10002" target="_blank">link</a>
+
 **Ariflow Web UI**: <>
+
 **Superset Web UI**: <>
 
 
