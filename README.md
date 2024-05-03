@@ -78,7 +78,7 @@ Data Warehouse in Hadoop hdfs
 # Docker Deployment
 ## Install and run data platform with docker syntax:
 ```
-    make
+make
 ```
 
 ## Run cluster:
